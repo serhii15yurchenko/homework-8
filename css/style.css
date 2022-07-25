@@ -1,0 +1,256 @@
+* {
+    box-sizing: border-box;
+    line-height: 1;
+    scroll-behavior: smooth;
+}
+
+a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+body {
+    font-size: 28px;
+    background-image: url(../img/bg.png);
+    background-attachment: fixed;
+    background-position: right 150px;
+    background-repeat: no-repeat;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    z-index: 1;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    min-height: 80px;
+}
+
+.header-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.lang {
+    font-family: 'Tourney';
+    font-weight: 600;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    margin-right: 50px;
+}
+
+.list-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.item-header {
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: 0.03em;
+}
+
+.item-header:not(:last-child) {
+    margin-right: 10px;
+}
+
+.logo {
+    width: 238px;
+    height: 54px;
+}
+
+.main-info .container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 70px;
+    padding-bottom: 90px;
+}
+
+.container .aside {
+    margin-right: 30px;
+    max-width: 385px;
+    padding: 10px;
+}
+
+.aside-list {
+    font-family: 'Francois One', sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    position: sticky;
+    top: 150px;
+}
+
+.aside-item {
+    border-bottom: 1px solid #BDBDBD;
+}
+
+.aside-item:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+.container main {
+    max-width: 785px;
+}
+
+.section {
+    position: relative;
+}
+
+section:not(:last-child) {
+    margin-bottom: 70px;
+}
+
+.title-section {
+    display: flex;
+    align-items: flex-start;
+    font-family: 'Francois One', sans-serif;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.title-section::before {
+    content: '';
+    width: 100px;
+    height: 8px;
+    position: absolute;
+    top: -20px;
+    background-color: #000000;
+}
+
+.title-section span {
+    font-family: 'Farro', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    letter-spacing: 0.04em;
+    text-transform: capitalize;
+    margin-left: 10px; 
+    line-height: 1;
+}
+
+.text,
+ul {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+    line-height: 48px;
+}
+
+.text:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.list-item:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+.list-item p {
+    margin-top: 40px;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.cursive {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.background {
+    background-color: #DADADA;
+}
+
+@media only screen and (max-width:991px) {
+    .container {
+        padding: 0 15px;
+    }
+}
+
+@media only screen and (max-width:575px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .lang {
+        font-size: 15px;
+        margin-right: 25px;
+    }
+
+    .item-header {
+        font-size: 17px;
+    }
+
+    .item-header:not(:last-child) {
+        margin-right: 5px;
+    }
+
+    .main-info .container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 25px;
+        padding-bottom: 45px;
+    }
+
+    .container .aside {
+        margin: 0 auto;
+        padding: 5px;
+        margin-bottom: 50px;
+    }
+
+    .aside-list {
+        font-size: 25px;
+    }
+
+    .aside-item:not(:last-child) {
+        margin-bottom: 35px;
+    }
+
+    .aside-item {
+        text-align: center;
+    }
+    
+    }
+
+
+
+
+
+
