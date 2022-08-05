@@ -10,8 +10,9 @@ a{
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1230px;
     margin: 0 auto;
+    padding: 0 15px;
 }
 
 body {
@@ -51,7 +52,6 @@ header .container {
 
 .header-inner {
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
@@ -65,7 +65,6 @@ header .container {
 
 .list-header {
     display: flex;
-    flex-direction: row;
 }
 
 .item-header {
@@ -75,8 +74,9 @@ header .container {
     letter-spacing: 0.03em;
 }
 
-.item-header:not(:last-child) {
-    margin-right: 10px;
+.one::after {
+    content:'/';
+    margin: 0 10px;
 }
 
 .logo {
@@ -86,37 +86,30 @@ header .container {
 
 .main-info .container {
     display: flex;
-    justify-content: space-between;
-    margin-top: 70px;
+    padding-top: 70px;
     padding-bottom: 90px;
-}
-
-.container .aside {
-    margin-right: 30px;
-    max-width: 385px;
-    padding: 10px;
 }
 
 .aside-list {
     font-family: 'Francois One', sans-serif;
     font-size: 36px;
-    line-height: 48px;
     letter-spacing: 0.04em;
     text-transform: uppercase;
     position: sticky;
-    top: 150px;
+    top: 160px;
+    list-style: none;
+    margin-right: 30px;
+    padding: 10px 6px 10px 10px;
+    min-width: 385px;
 }
 
 .aside-item {
     border-bottom: 1px solid #BDBDBD;
+    padding-bottom: 10px;
 }
 
 .aside-item:not(:last-child) {
     margin-bottom: 70px;
-}
-
-.container main {
-    max-width: 785px;
 }
 
 .section {
@@ -158,7 +151,7 @@ section:not(:last-child) {
 }
 
 .text,
-ul {
+.list {
     font-family: 'PT Sans', sans-serif;
     font-weight: 400;
     line-height: 48px;
@@ -170,10 +163,6 @@ ul {
 
 .list-item:not(:last-child) {
     margin-bottom: 40px;
-}
-
-.list-item p {
-    margin-top: 40px;
 }
 
 .underline {
@@ -193,61 +182,141 @@ ul {
 }
 
 @media only screen and (max-width:991px) {
-    .container {
-        padding: 0 15px;
-    }
-}
-
-@media only screen and (max-width:575px) {
-    .container {
-        padding: 0 15px;
-    }
-
-    .header-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .lang {
-        font-size: 15px;
-        margin-right: 25px;
-    }
-
-    .item-header {
-        font-size: 17px;
-    }
-
-    .item-header:not(:last-child) {
-        margin-right: 5px;
-    }
-
     .main-info .container {
-        display: flex;
         flex-direction: column;
-        margin-top: 25px;
-        padding-bottom: 45px;
-    }
-
-    .container .aside {
-        margin: 0 auto;
-        padding: 5px;
-        margin-bottom: 50px;
     }
 
     .aside-list {
+        font-size: 30px;
+        margin-right: 0px;
+        padding: 10px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+
+    .aside-item:not(:last-child) {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width:800px) {
+    
+    body {
+        font-size: 24px;
+        background-size: 500px;
+    }
+
+    header .container {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .header-inner {
+        flex-direction: column-reverse;
+    }
+
+    .lang {
+        margin-right: 0px;
+    }
+
+    .list-header {
+        display: flex;
+        margin-bottom: 10px;
+    }
+    
+    .one::after {
+        content:'/';
+        margin: 0 6px;
+    }
+    
+    .logo {
+        width: 238px;
+        height: 54px;
+        margin-bottom: 15px;
+    }
+
+    .main-info .container {
+        padding-top: 30px;
+        padding-bottom: 40px;
+    }
+
+    .title-section {
+        font-size: 30px;
+    }
+
+    .title-section span {
+        font-size: 14px;
+    }
+}
+
+@media only screen and (max-width:600px) {
+    
+    body {
+        font-size: 22px;
+        background-size: 400px;
+    }
+    
+    .aside-list {
         font-size: 25px;
+        margin-bottom: 80px;
     }
 
     .aside-item:not(:last-child) {
         margin-bottom: 35px;
     }
+}
 
-    .aside-item {
-        text-align: center;
+@media only screen and (max-width:450px) {
+    
+    body {
+        font-size: 19px;
+        background-size: 300px;
+    }
+
+    .lang {
+        font-size: 15px;
+    }
+
+    .item-header {
+        font-size: 19px;
+    }
+
+    .logo {
+        width: 150px;
+        height: 40px;
     }
     
+    .aside-list {
+        min-width: 0px;
+        font-size: 21px;
     }
+
+    .title-section {
+        display: flex;
+        flex-direction: column;
+        font-size: 25px;
+    }
+
+    .title-section span {
+        margin-left: 0px;
+        font-size: 12px; 
+    }
+
+    .text,
+    .list {
+    line-height: 42px;
+}
+
+    .text:not(:last-child) {
+        margin-bottom: 20px;
+    }
+    
+    .list-item:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
 
 
 
